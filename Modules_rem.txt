@@ -1,0 +1,32 @@
+bool LOADED = false;
+bool CONNECTED_STATUS = false;
+bool FIRE_CODE_RECIEVED = false;
+bool RELAY_FAULTY=false;
+
+
+String rec = "";
+
+int relay_trigger = 6;
+
+int dev_status_led = 4;
+int pyro_status_led = 5;
+int IR_status_led = 8;
+
+void led_out(int led, int times, int interval, bool stay_on)
+
+
+void led_out(int led, int times, int interval, bool stay_on, bool blinks){
+ 
+
+
+recieve code-------------------
+delay(100);
+  Serial.print("Rec: ");
+  Serial.println(rec);
+  if (rec == "ON"){
+    digitalWrite(LED_BUILTIN, HIGH);
+    }
+  else if (rec == "OFF"){
+    digitalWrite(LED_BUILTIN, LOW);
+    }
+  rec = "";
